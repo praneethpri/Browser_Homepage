@@ -1,0 +1,33 @@
+:host {
+  width: 450pt;
+  height: 60pt;
+  border: solid 2px white;
+  z-index: 3;
+  float: left;
+  position: absolute;
+  top: 370pt;
+  left: 40pt;
+  border-radius: 40pt;
+  overflow: hidden;
+}
+
+.button-controls {
+  display: flex;
+  flex-direction: row;
+}
+
+.buttons {
+  width: 40pt;
+  height: 40pt;
+  border: none;
+  border-radius: 50%;
+  background-color: white;
+  margin: 10pt;
+  margin-left: 25pt;
+  display: flex;
+  justify-content: center;
+}
+
+.buttons > img {
+  transform: scale(0.8);
+}

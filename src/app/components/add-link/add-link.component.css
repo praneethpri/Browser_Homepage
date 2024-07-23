@@ -1,0 +1,21 @@
+:host {
+  width: 450pt;
+  height: 300pt;
+  background-color: whitesmoke;
+  position: absolute;
+  z-index: 4;
+  margin: 0;
+  top: 12%;
+  left: 25%;
+}
+
+dialog {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header {
+  border: none;
+  background-color: white;
+}

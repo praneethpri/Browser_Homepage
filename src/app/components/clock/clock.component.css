@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+TZ:wght@100..400&display=swap');
+
+.clock-frame {
+  width: 600pt;
+  height: 300pt;
+  margin: 0;
+  padding: 0;
+}
+
+.date-and-time-strings {
+  font-family: 'Playwrite TZ', sans-serif;
+  font-weight: bolder;
+  text-align: center;
+  text-shadow: 5px 5px 3px black;
+  color: white;
+}
+
+.time-string {
+  font-size: 90pt;
+  margin: 0;
+}
+
+.date-string {
+  font-size: 40pt;
+  margin: 15pt;
+}
+
+.day-string {
+  font-size: 30pt;
+  margin: 10pt;
+}
