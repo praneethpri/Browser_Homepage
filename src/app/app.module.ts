@@ -8,6 +8,9 @@ import { LinkButtonComponent } from './components/link-button/link-button.compon
 import { ControlButtonsComponent } from './components/control-buttons/control-buttons.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AddLinkComponent } from './components/add-link/add-link.component';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatButtonModule } from '@angular/material/button'
 
 @NgModule({
   declarations: [
@@ -20,7 +23,10 @@ import { AddLinkComponent } from './components/add-link/add-link.component';
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

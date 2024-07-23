@@ -1,21 +1,17 @@
-:host {
+dialog {
+  position: absolute;
+  display: flex;
+  flex-flow: column;
+  z-index: 4;
   width: 450pt;
   height: 300pt;
+  box-shadow: 3px 3px 3px grey;
   background-color: whitesmoke;
-  position: absolute;
-  z-index: 4;
-  margin: 0;
-  top: 12%;
-  left: 25%;
+  top: 10%;
+  margin: 2;
 }
 
-dialog {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.header {
-  border: none;
-  background-color: white;
+h1 {
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
 }
