@@ -1,10 +1,15 @@
+@font-face {
+  font-family: "Material Icons";
+  src: url("../../../assets/MaterialIcons-Regular.ttf");
+}
+
 dialog {
   position: absolute;
   display: flex;
   flex-flow: column;
   z-index: 4;
   width: 450pt;
-  height: 300pt;
+  height: 240pt;
   box-shadow: 3px 3px 3px grey;
   background-color: whitesmoke;
   top: 10%;
@@ -13,5 +18,22 @@ dialog {
 
 h1 {
   text-align: center;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.button-set {
+  display: flex;
+  justify-content: right;
+}
+
+mat-icons {
+  font-family: "Material Icons";
+}
+
+button {
+  margin: 10pt 8pt 0 8pt;
+}
+
+mat-form-field {
+  width: calc(90%);
 }

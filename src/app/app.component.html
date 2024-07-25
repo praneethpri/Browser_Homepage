@@ -1,6 +1,11 @@
 <div class="main-div">
   <app-clock></app-clock>
   <app-links></app-links>
-  <app-control-buttons></app-control-buttons>
-  <app-add-link></app-add-link>
+  <app-control-buttons
+    (notifyParentPlus)="showAddLinkPlusFunc($event)"
+  ></app-control-buttons>
+  <app-add-link
+    (notifyToShow)="showAddLinkFunc($event)"
+    *ngIf="showAddLink"
+  ></app-add-link>
 </div>

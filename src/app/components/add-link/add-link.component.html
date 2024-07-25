@@ -1,12 +1,42 @@
 <dialog>
   <h1>Add a Bookmark</h1>
-  <mat-form-field>
-    <mat-label>Add a Tilte</mat-label>
-    <input matInput type="text" name="Tilte" placeholder="Add a Title">
-  </mat-form-field>
-  <mat-form-field>
-    <mat-label>Add a link</mat-label>
-    <input matInput type="text" name="link" placeholder="Add a link">
-  </mat-form-field>
-  <button mat-stroked-button type="submit">Cancel</button>
+  <form [formGroup]="bookmarkForm">
+    <mat-form-field>
+      <mat-label>Add a Tilte</mat-label>
+      <input
+        matInput
+        type="text"
+        name="Tilte"
+        placeholder="Add a Title"
+        formControlName="title"
+      />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Add a link</mat-label>
+      <input
+        matInput
+        type="text"
+        name="link"
+        placeholder="Add a link"
+        formControlName="link"
+      />
+    </mat-form-field>
+    <div class="button-set">
+      <button
+        mat-fab
+        extended
+        color="success"
+        type="submit"
+        (click)="notifyParent()"
+      >
+        <mat-icon>cancel</mat-icon>Cancel
+      </button>
+      <button mat-fab extended type="submit" (click)="getItems()">
+        <mat-icon class="material-symbols-out-radio-button">{{
+          faviconChange
+        }}</mat-icon
+        >Fetch Icon & Save
+      </button>
+    </div>
+  </form>
 </dialog>

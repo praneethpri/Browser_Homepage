@@ -1,4 +1,4 @@
-import Dexie, { Table } from "dexie";
+import Dexie, { Table } from 'dexie';
 
 export interface LinkTable {
   id?: number;
@@ -13,9 +13,9 @@ export class AppDB extends Dexie {
   constructor() {
     super('ngdexieliveQuery');
     this.version(3).stores({
-      linkSet: '++id, title, favicon, link'
-    })
-    this.linkSet = this.table('linkSet')
+      linkSet: '++id, title, favicon, link',
+    });
+    this.linkSet = this.table('linkSet');
   }
 
   async populate() {
@@ -23,12 +23,12 @@ export class AppDB extends Dexie {
       {
         title: 'Yahoo',
         favicon: 'x',
-        link: 'yahoo.com'
-      }
-    ]
+        link: 'yahoo.com',
+      },
+    ];
 
     for (const link of linksToAdd) {
-      const count = await this.linkSet.where('link').equals(link.link).count()
+      const count = await this.linkSet.where('link').equals(link.link).count();
       if (count == 0) {
         await this.linkSet.add(link);
       }
