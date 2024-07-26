@@ -43,4 +43,13 @@ export class AppDB extends Dexie {
       console.error('Error clearing linkSet table:', error);
     }
   }
+
+  async addToDatabase() {
+    try {
+      await this.linkSet.add({title: 'xxu', link: 'vvu', favicon: 'lls'})
+    } catch (error) {
+      console.error('Error in adding : ', error)
+    }
+    )
+  }
 }
