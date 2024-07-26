@@ -50,6 +50,5 @@ export class AppDB extends Dexie {
     } catch (error) {
       console.error('Error in adding : ', error)
     }
-    )
   }
 }
