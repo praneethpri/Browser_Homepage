@@ -40,4 +40,13 @@ export class LinkImportService {
       console.error('Error clearing the database ! ')
     }
   }
+
+  async addTableData() {
+    try {
+      await this.db.addToDatabase();
+    }
+    catch {
+      console.error('Error adding to database !')
+    }
+  }
 }
