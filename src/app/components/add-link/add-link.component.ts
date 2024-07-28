@@ -5,7 +5,8 @@ import {
   FormGroup,
   Validators,
 } from '@angular/forms';
-import Dexie from 'dexie';
+import { LinkImportService } from 'src/app/services/link-import.service';
+import { LinkTable } from 'src/app/db';
 
 @Component({
   selector: 'app-add-link',
