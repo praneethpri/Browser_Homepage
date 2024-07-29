@@ -13,11 +13,12 @@ import { LinkImportService } from 'src/app/services/link-import.service';
 })
 export class AddLinkComponent {
   @Output() notifyToShow = new EventEmitter<boolean>();
+  @Output() reRenderLinks = new EventEmitter<boolean>();
 
   public faviconChange: string = 'circle';
 
   notifyParent() {
-    this.notifyToShow.emit(false);
+    this.notifyToShow.emit();
   }
 
   bookmarkForm: FormGroup = new FormGroup({
@@ -51,6 +52,7 @@ export class AddLinkComponent {
     try {
       await this.dexieService.addTableData(title, link, favicon || '');
       this.dexieService.getAllLinks();
+      this.notifyParent()
     } catch (error) {
       console.error('Error in the add-link component : ', error)
     };

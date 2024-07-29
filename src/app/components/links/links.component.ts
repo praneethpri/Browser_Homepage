@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectorRef, Component } from '@angular/core';
 import { LinkImportService } from 'src/app/services/link-import.service';
 import { LinkTable } from 'src/app/db';
 
@@ -10,7 +10,7 @@ import { LinkTable } from 'src/app/db';
 export class LinksComponent {
   links: LinkTable[] = [];
 
-  constructor(private dexieService: LinkImportService) { }
+  constructor(private dexieService: LinkImportService, private cdRef: ChangeDetectorRef) { }
 
   ngOnInit(): void {
     this.populateDatabase();
@@ -29,5 +29,10 @@ export class LinksComponent {
   async clearDatabase() {
     await this.dexieService.clearTableData();
     this.fetchLinks();
+  }
+
+  async renderAgain() {
+    await this.dexieService.getAllLinks()
+    window.location.reload();
   }
 }

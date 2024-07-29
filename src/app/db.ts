@@ -1,4 +1,4 @@
-import Dexie, { Table } from 'dexie';
+import Dexie, { Table, liveQuery } from 'dexie';
 
 export interface LinkTable {
   id?: number;
@@ -50,5 +50,18 @@ export class AppDB extends Dexie {
     } catch (error) {
       console.error('Error in adding : ', error)
     }
+  }
+
+watchChanges(callback: (links: LinkTable[]) => void) {
+    const liveLinks = liveQuery(() => this.linkSet.toArray());
+
+    liveLinks.subscribe({
+      next: (links) => {
+        callback(links)
+      },
+      error: (error) => {
+        console.log('Error in Live Query : ', error)
+      }
+    })
   }
 }
