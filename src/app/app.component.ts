@@ -17,4 +17,8 @@ export class AppComponent {
   public showAddLinkPlusFunc(eventItem: any) {
     this.showAddLink = eventItem;
   }
+
+  public renderAgain() {
+    window.location.reload();
+  }
 }

@@ -17,6 +17,10 @@ export class LinksComponent {
     this.fetchLinks();
   }
 
+  handles = (updatedLinks: LinkTable[]) => {
+    this.links = updatedLinks;
+  }
+
   async populateDatabase() {
     await this.dexieService.populateLinkTable();
   }
@@ -31,8 +35,10 @@ export class LinksComponent {
     this.fetchLinks();
   }
 
-  async renderAgain() {
-    await this.dexieService.getAllLinks()
-    window.location.reload();
+  async renderAgain(event: boolean) {
+    if (event) {
+      await this.dexieService.getAllLinks()
+      this.dexieService.watchDatabase(this.handles)
+    }
   }
 }

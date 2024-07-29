@@ -21,6 +21,10 @@ export class AddLinkComponent {
     this.notifyToShow.emit();
   }
 
+  reRenderLinksMessage() {
+    this.reRenderLinks.emit();
+  }
+
   bookmarkForm: FormGroup = new FormGroup({
     title: new FormControl('', Validators.required),
     link: new FormControl('', Validators.required),
@@ -52,9 +56,11 @@ export class AddLinkComponent {
     try {
       await this.dexieService.addTableData(title, link, favicon || '');
       this.dexieService.getAllLinks();
+      this.reRenderLinksMessage()
       this.notifyParent()
     } catch (error) {
       console.error('Error in the add-link component : ', error)
     };
+
   }
 }

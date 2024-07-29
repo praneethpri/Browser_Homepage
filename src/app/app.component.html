@@ -5,7 +5,7 @@
     (notifyParentPlus)="showAddLinkPlusFunc($event)"
   ></app-control-buttons>
   <app-add-link
-    (notifyToShow)="showAddLinkFunc($event)"
+    (notifyToShow)="showAddLinkFunc($event)" (reRenderLinks)="renderAgain()"
     *ngIf="showAddLink"
   ></app-add-link>
 </div>

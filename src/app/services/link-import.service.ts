@@ -49,4 +49,8 @@ export class LinkImportService {
       console.error('Error adding to database !')
     }
   }
+
+  watchDatabase(callback: (links: LinkTable[]) => void) {
+    this.db.watchChanges(callback);
+  }
 }
