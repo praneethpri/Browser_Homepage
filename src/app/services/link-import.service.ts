@@ -41,9 +41,9 @@ export class LinkImportService {
     }
   }
 
-  async addTableData() {
+  async addTableData(title: string, link: string, favicon: string) {
     try {
-      await this.db.addToDatabase();
+      await this.db.addToDatabase(title, link, favicon);
     }
     catch {
       console.error('Error adding to database !')

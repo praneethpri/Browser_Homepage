@@ -44,9 +44,9 @@ export class AppDB extends Dexie {
     }
   }
 
-  async addToDatabase() {
+  async addToDatabase(title: string, link: string, favicon: string): Promise<void> {
     try {
-      await this.linkSet.add({title: 'xxu', link: 'vvu', favicon: 'lls'})
+      await this.linkSet.add({title, link, favicon})
     } catch (error) {
       console.error('Error in adding : ', error)
     }

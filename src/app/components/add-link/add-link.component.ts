@@ -1,12 +1,10 @@
 import { Component, Output, EventEmitter } from '@angular/core';
 import {
-  FormBuilder,
   FormControl,
   FormGroup,
   Validators,
 } from '@angular/forms';
 import { LinkImportService } from 'src/app/services/link-import.service';
-import { LinkTable } from 'src/app/db';
 
 @Component({
   selector: 'app-add-link',
@@ -27,14 +25,14 @@ export class AddLinkComponent {
     link: new FormControl('', Validators.required),
   });
 
-  constructor(private formBuilder: FormBuilder) {}
+  constructor(private dexieService: LinkImportService) {}
 
   ngOnInit() {}
 
   async getItems() {
-    let title = this.bookmarkForm.get('title')?.value;
-    let link = this.bookmarkForm.get('link')?.value;
-    let faviconHtml;
+    let title: string = this.bookmarkForm.get('title')?.value;
+    let link: string = this.bookmarkForm.get('link')?.value;
+    let favicon: string | null = null;
 
     let regex = /^https?:\/\/([^/?#]+).*$/;
 
@@ -45,13 +43,16 @@ export class AddLinkComponent {
 
       const faviconLink = `https://www.google.com/s2/favicons?domain=${domain}&sz=128`;
 
-      faviconHtml = `<img src="${faviconLink}" alt="favicon" />`;
+      favicon = `<img src="${faviconLink}" alt="favicon" />`;
     } else {
       console.log('Invalid URL format');
     }
 
-    console.log(title);
-    console.log(link);
-    console.log(faviconHtml);
+    try {
+      await this.dexieService.addTableData(title, link, favicon || '');
+      this.dexieService.getAllLinks();
+    } catch (error) {
+      console.error('Error in the add-link component : ', error)
+    };
   }
 }
