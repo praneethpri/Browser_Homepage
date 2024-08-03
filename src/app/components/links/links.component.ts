@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { LinkImportService } from 'src/app/services/link-import.service';
 import { LinkTable } from 'src/app/db';
 

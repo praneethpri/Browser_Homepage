@@ -46,9 +46,8 @@ export class AddLinkComponent {
     if (match) {
       const domain = match[1];
 
-      const faviconLink = `https://www.google.com/s2/favicons?domain=${domain}&sz=128`;
+      favicon = `https://www.google.com/s2/favicons?domain=${domain}&sz=128`;
 
-      favicon = `<img src="${faviconLink}" alt="favicon" />`;
     } else {
       console.log('Invalid URL format');
     }

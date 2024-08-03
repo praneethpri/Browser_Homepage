@@ -71,12 +71,19 @@ export class ClockComponent {
     let year = date.getFullYear()
     let month_num = date.getMonth()
     let month: string = '';
-    let date_num = date.getDate()
     if (month_num < 10) {
       month = `0${month_num}`
     }
     else {
       month = `${month_num}`
+    }
+    let date_num_value: number = date.getDate()
+    let date_num: string = '';
+    if (date_num_value < 10) {
+      date_num = `0${date_num_value}`
+    }
+    else {
+      date_num = `${date_num_value}`
     }
 
     let day_value = date.getDay()
