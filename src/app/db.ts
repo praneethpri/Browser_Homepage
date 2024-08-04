@@ -19,13 +19,7 @@ export class AppDB extends Dexie {
   }
 
   async populate() {
-    const linksToAdd = [
-      {
-        title: 'Yahoo',
-        favicon: 'x',
-        link: 'yahoo.com',
-      },
-    ];
+    const linksToAdd: LinkTable[] = [];
 
     for (const link of linksToAdd) {
       const count = await this.linkSet.where('link').equals(link.link).count();

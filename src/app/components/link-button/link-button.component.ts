@@ -5,22 +5,22 @@ import { LinkTable } from 'src/app/db';
 @Component({
   selector: 'app-link-button',
   templateUrl: './link-button.component.html',
-  styleUrls: ['./link-button.component.css']
+  styleUrls: ['./link-button.component.css'],
 })
 export class LinkButtonComponent {
   @Input() link: LinkTable[] = [];
 
-  public safeFaviconUrl: SafeResourceUrl;
-
-  constructor(private sanitizer: DomSanitizer) {
-    this.safeFaviconUrl = this.sanitizer.bypassSecurityTrustUrl(this.inputFavicon)
-  }
-
+  public safeFaviconUrl: SafeResourceUrl = '';
   public inputTitle: string = '';
   public inputFavicon: string = '';
 
+  constructor(private sanitizer: DomSanitizer) {}
+
   ngOnInit() {
-    this.inputTitle = this.link[0].title
-    this.inputFavicon = this.link[0].favicon
+    if (this.link.length > 0) {
+      this.inputTitle = this.link[0].title;
+      this.inputFavicon = this.link[0].favicon;
+      this.safeFaviconUrl = this.sanitizer.bypassSecurityTrustResourceUrl(this.inputFavicon)
+    }
   }
 }
