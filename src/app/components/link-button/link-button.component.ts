@@ -21,6 +21,7 @@ export class LinkButtonComponent {
       this.inputTitle = this.link[0].title;
       this.inputFavicon = this.link[0].favicon;
       this.safeFaviconUrl = this.sanitizer.bypassSecurityTrustResourceUrl(this.inputFavicon)
+      console.log(this.safeFaviconUrl)
     }
   }
 }
