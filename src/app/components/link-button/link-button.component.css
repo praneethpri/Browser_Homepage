@@ -1,5 +1,5 @@
 .link-box {
-  width: 5.5rem;
+  width: 6.5rem;
   height: 7rem;
   border: 0.14rem solid black;
   border-radius: 8pt;
@@ -38,4 +38,3 @@
   height: inherit;
   width: inherit;
 }
-
