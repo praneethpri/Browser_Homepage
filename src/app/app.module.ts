@@ -13,6 +13,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { ReactiveFormsModule } from '@angular/forms';
+import { TitleLimiterPipe } from './pipes/title-limiter.pipe';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     LinkButtonComponent,
     ControlButtonsComponent,
     AddLinkComponent,
+    TitleLimiterPipe,
   ],
   imports: [
     BrowserModule,
