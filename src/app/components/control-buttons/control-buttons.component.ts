@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, HostListener, Output } from '@angular/core';
 
 @Component({
   selector: 'app-control-buttons',
@@ -16,5 +16,11 @@ export class ControlButtonsComponent {
 
   public notifyParentPlusFunc() {
     this.notifyParentPlus.emit(this.addLinkPlus);
+  }
+
+  @HostListener('window:keydown.control.d', ['$event'])
+  handleKeyboardEvent(event: KeyboardEvent) {
+    this.checkVariable();
+    event?.preventDefault();
   }
 }
