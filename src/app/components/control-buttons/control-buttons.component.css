@@ -1,13 +1,13 @@
-:host {
-  width: 450pt;
-  height: 60pt;
-  border: solid 2px white;
+.host-div {
+  width: 36rem;
+  height: 5rem;
+  border: solid 0.2rem white;
   z-index: 3;
   float: left;
   position: absolute;
-  top: 370pt;
+  top: 25rem;
   left: 40pt;
-  border-radius: 40pt;
+  border-radius: 3rem;
   overflow: hidden;
 }
 
