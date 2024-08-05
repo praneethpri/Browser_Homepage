@@ -8,9 +8,9 @@ dialog {
   display: flex;
   flex-flow: column;
   z-index: 4;
-  width: 450pt;
-  height: 240pt;
-  box-shadow: 3px 3px 3px grey;
+  width: 40rem;
+  height: 20rem;
+  box-shadow: 0.2rem 0.2rem 0.4rem #111;
   background-color: whitesmoke;
   top: 10%;
   margin: 2;
@@ -31,7 +31,7 @@ mat-icons {
 }
 
 button {
-  margin: 10pt 8pt 0 8pt;
+  margin: 0.7rem 0.5rem 0 0.5rem;
 }
 
 mat-form-field {
