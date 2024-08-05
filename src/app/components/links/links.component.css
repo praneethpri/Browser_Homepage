@@ -2,20 +2,20 @@
   position: relative;
   float: right;
   z-index: 2;
-  border: 3px solid black;
-  border-radius: 20pt;
-  width: 650pt;
-  height: 400pt;
+  border: 0.25rem solid black;
+  border-radius: 1rem;
+  width: 45rem;
+  height: calc(100vw - 3%);
   overflow: hidden;
   overflow-y: auto;
   background-color: rgb(245, 245, 245);
-  margin-top: 7pt;
-  margin-right: 7pt;
+  margin-top: 0.6rem;
+  margin-right: 0.6rem;
 }
 
 .link-form {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   justify-items: center;
-  margin-top: 8pt;
+  margin-top: 0.8rem;
 }
