@@ -1,31 +1,36 @@
-@import url('https://fonts.googleapis.com/css2?family=Playwrite+TZ:wght@100..400&display=swap');
+@font-face {
+  font-family: "Orbitron";
+  src:
+    local("Orbitron"),
+    url("./../../../assets/Orbitron-VariableFont_wght.ttf") format("truetype");
+}
 
 .clock-frame {
-  width: 600pt;
-  height: 300pt;
+  width: 47rem;
+  height: 21rem;
   margin: 0;
   padding: 0;
 }
 
 .date-and-time-strings {
-  font-family: 'Playwrite TZ', sans-serif;
+  font-family: "Orbitron", cursive, sans-serif;
   font-weight: bolder;
   text-align: center;
-  text-shadow: 5px 5px 3px black;
+  text-shadow: 0.5rem 0.5rem 0.4rem black;
   color: white;
 }
 
 .time-string {
-  font-size: 90pt;
+  font-size: 8rem;
   margin: 0;
 }
 
 .date-string {
-  font-size: 40pt;
-  margin: 15pt;
+  font-size: 3.5rem;
+  margin: 1rem;
 }
 
 .day-string {
-  font-size: 30pt;
-  margin: 10pt;
+  font-size: 2.5rem;
+  margin: 0.7rem;
 }
