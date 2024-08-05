@@ -2,17 +2,17 @@
   width: 6.5rem;
   height: 7rem;
   border: 0.14rem solid black;
-  border-radius: 8pt;
+  border-radius: 0.8rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 10pt;
+  margin-bottom: 0.7rem;
 }
 
 .link-box-icon {
-  width: 40pt;
-  height: 40pt;
-  margin: 3pt 0 2pt 0;
+  width: 3rem;
+  height: 3rem;
+  margin: 0.3rem 0 0.15rem 0;
   opacity: 1;
 }
 
