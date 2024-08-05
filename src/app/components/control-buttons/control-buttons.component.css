@@ -17,15 +17,15 @@
 }
 
 .buttons {
-  width: 40pt;
-  height: 40pt;
+  display: flex;
+  justify-content: center;
+  width: 3.5rem;
+  height: 3.5rem;
   border: none;
   border-radius: 50%;
   background-color: white;
-  margin: 10pt;
-  margin-left: 25pt;
-  display: flex;
-  justify-content: center;
+  margin: 0.7rem;
+  margin-left: 2rem;
 }
 
 .buttons:hover {
