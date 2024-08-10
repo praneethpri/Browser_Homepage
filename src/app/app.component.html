@@ -1,6 +1,9 @@
 <div class="main-div">
-  <app-clock></app-clock>
-  <app-links></app-links>
+  <app-search-bar></app-search-bar>
+  <div class="clocks-and-links">
+    <app-clock></app-clock>
+    <app-links></app-links>
+  </div>
   <app-control-buttons
     (notifyParentPlus)="showAddLinkPlusFunc($event)"
   ></app-control-buttons>

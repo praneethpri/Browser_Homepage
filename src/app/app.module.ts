@@ -14,6 +14,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { ReactiveFormsModule } from '@angular/forms';
 import { TitleLimiterPipe } from './pipes/title-limiter.pipe';
+import { SearchBarComponent } from './components/search-bar/search-bar.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { TitleLimiterPipe } from './pipes/title-limiter.pipe';
     ControlButtonsComponent,
     AddLinkComponent,
     TitleLimiterPipe,
+    SearchBarComponent,
   ],
   imports: [
     BrowserModule,
